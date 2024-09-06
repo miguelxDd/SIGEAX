@@ -1,0 +1,85 @@
+body {
+    background-color: rgb(181, 186, 189);
+}
+.contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.opciones{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opciones div{
+    border: 2px solid #404040;
+    border-radius: 20px;
+    display: flex;
+}
+
+.opciones div button{
+    border: none;
+    background-color: #f8f9fa;
+    padding: 5px 10px;
+}
+.btnsOpci:hover{
+    background-color: #a2a3a5;
+    color: #ffffff;
+}
+.btnsOpci.activo{
+    background-color: #343a40;
+    color: white;
+}
+
+.btnCliente{
+    border-radius: 20px 0px 0px 20px;
+}
+.btnVendedor{
+    border-radius: 0px 20px 20px 0px;
+}
+
+.opcionesContenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+.opcionImagen{
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+.indicadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+.indicador{
+    width: 20px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #a4a7a9;
+    margin: 0 5px 0 5px;
+}
+.indicador.activo{
+    background-color: #343a40;
+}
+.cuerpoContenido{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

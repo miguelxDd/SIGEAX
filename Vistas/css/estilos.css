@@ -1,0 +1,206 @@
+body {
+    background-color: rgb(181, 186, 189);
+}
+.contenido {
+    min-height: calc(100vh - 80px); /* Resta la altura del pie de página */
+}
+footer {
+    left: 0;
+    bottom: 0;
+    background-color: aliceblue;
+    padding: 20px;
+    position: relative;
+}
+.pie-izquierdo{display: inline;  }
+.pie-derecho{ display: inline; position: absolute; right: calc(2%); } 
+/* -----------------------   ESTILOS GENERALES PARAS MEJOR APARIENCIA DE LAS CARDS Y BOTONES ----------------------------- */
+.card {
+    background-color: ghostwhite;
+    border: none;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1), 0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+}
+
+.btn {
+    font-size: 15px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+}
+
+.btn:hover {
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1), 0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* =============================================== Cargando pagina =================================================== */
+.loader{position:fixed;left:0px;top:0px;width:100%;height:100%;z-index:9999;background-color:#f9f9f9;opacity:1;display: flex; justify-content: center;align-items: center;}
+#cargando {
+    margin: auto;
+    border: 10px solid #da7b7b;
+    border-top: 10px solid rgb(35, 78, 165);
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    animation: girar 2s linear infinite;
+}
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* ======================================================================================== */
+/* -------------------------------- ESTILO DE LA BARRA LATERAL --------------------------------------------------------- */
+#barraLateral{ background-color: rgb(226, 226, 226); }
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------- ESTILOS BARRA ESTADO DEL PAQUETE --------------------------------------------------------- */
+.progress-bar {
+    width: 90%;
+    height: 20px;
+    margin: auto;
+    border-radius: 40px;
+    margin-bottom: 25px;
+    background-color: #bdd0b0;
+    position: relative;
+    overflow: visible;
+}
+
+.barraLLenado {
+    height: 100%;
+    width: 50px;
+    background-color: #4caf50;
+    position: absolute;
+}
+
+.puntosProgreso {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.puntoProgreso {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    position: relative;
+}
+
+.textoPuntos {
+    position: absolute;
+    top: 40px;
+    left: -8px;
+}
+
+#palabraLarga {
+    transform: translateX(-40px);
+}
+
+@media screen and (max-width: 600px) {
+    #ajustarPeq {
+        display: block;
+    }
+
+    #palabraLarga {
+        transform: translateX(-5px);
+    }
+    .progress-bar {
+        margin-bottom: 45px;
+    }
+}
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------- ESTILOS PARA LAS TAJETAS DE INICIO --------------------------------------------------------- */
+.tarjInicio{ position: relative; } .tarjInicio h4 { margin-bottom: calc(6%); }
+.tarjInicio a { position: absolute; bottom: 0; left: 0; width: 100%; height: 40px; border-radius: 0; background-color: rgb(113, 124, 124); color: azure; text-decoration: none; line-height: 40px;}
+.tarjInicio a:hover { background-color: rgb(57, 65, 65); }
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------- ESTILOS PARA LAS TAJETAS DE RUTAS y destinos en agregar paquete para vendedor ------------------------- */
+/* .rutas:hover{ border: rgb(41, 40, 40) 1px solid;}
+.destinos:hover{ border: rgb(41, 40, 40) 1px solid;} */
+/* --------------------------------------------------------------------------------------------------------------------- */
+.bordeError{ border: red 1px solid;}
+
+/* -------------------------------- ESTILOS PARA TENER UN CONTENEDOR DE DOS SECCIONES ------------------------- */
+/* ------------ PARA HACER QUE LAS SECCIONES SE OCULTEN O MUESTREN ------------------- */
+.contenedorSecciones{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+.seccionAMover{
+    width: 100%;
+}
+.saleIzquierda{
+    animation: salirAlaIzquierda 1.2s forwards;
+}
+.saleDerecha{
+    animation: salirAlaDerecha 1.2s forwards;
+}
+.entraIzquierda{
+    animation: entrarPorLaIzquierda 1.2s forwards;
+}
+.entraDerecha{
+    animation: entrarPorLaDerecha 1.2s forwards;
+}
+
+@keyframes salirAlaIzquierda {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        visibility: hidden;
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes salirAlaDerecha {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        visibility: hidden;
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+@keyframes entrarPorLaIzquierda {
+    from {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes entrarPorLaDerecha {
+    from {
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}

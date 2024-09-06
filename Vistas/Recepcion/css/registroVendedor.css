@@ -1,0 +1,75 @@
+.botonesForm{
+    display: flex;
+    justify-content: space-between
+}
+.indicadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0 5px 0;
+}
+.contenedorIndicadores{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.indicador{
+    width: 20px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #a4a7a9;
+    margin: 0 5px 0 5px;
+}
+.indicador.activo{
+    background-color: #343a40;
+}
+.pasosRegistro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ////////////////////////// PARA EL REGOSTRO DE UN VENDEDOR  /////////////////////////////////// */
+.contenedorImagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+}
+.contenedorImagen img{
+    max-width: 220px;
+    max-height: 220px;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.seccionInputImagen{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@keyframes slideOutRight {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+      visibility: hidden;
+      transform: translate3d(140%, 0, 0);
+    }
+  }
+  
+  .slideOutRight {
+    animation: slideOutRight 0.5s forwards;
+  }

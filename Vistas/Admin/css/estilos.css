@@ -1,0 +1,108 @@
+.listaRutas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 55vh;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.itemRuta {
+    background-color: rgb(239, 244, 242);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.rutaDia {
+    margin-top: 5px;
+    padding: 5px 20px;
+    background-color: rgb(92, 140, 122);
+    color: white;
+    border-radius: 10px;
+}
+.rutaDia.semana{
+    cursor: pointer;    
+}
+.rutaDia.semana:hover{
+    background-color: rgb(86, 108, 175);
+}
+.rutaDia.semana.activo{
+    background-color: rgb(86, 108, 175);
+}
+.rutaDia.semana.noDisponible{
+    background-color: rgb(175, 86, 86);
+    cursor: not-allowed;
+}
+
+.rutaBotones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 20px;    
+}
+
+.listaDestinos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 55vh;
+    width: 100%;
+    margin-top: 10px;
+}
+.itemDestino {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(239, 244, 242);
+    width: 100%;
+    border-radius: 30px;
+    padding-bottom: 5px;
+}
+.destinoBotones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 20px 0px 20px;
+}
+
+.contenedorModal{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(158, 162, 166, 0.423);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 50px;
+    z-index: 100;
+}
+.contenedorModal.activo{
+    display: flex;
+}
+
+.contenedorDiasSemana{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
